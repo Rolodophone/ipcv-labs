@@ -4,8 +4,8 @@ import cv2
 def convolution(input_image, kernel):
     output_image = np.zeros(input_image.shape, dtype=np.uint8)
     kernel_radius = round((kernel.shape[0] - 1) / 2)  # note: this assumes kernel is square
-    input_padded = cv2.copyMakeBorder(input_image, kernel_radius, kernel_radius, kernel_radius, kernel_radius,
-                                      cv2.BORDER_REPLICATE)
+    input_padded = np.pad(input_image, kernel_radius, mode='edge')
+    kernel = np.flip(kernel)  # flip the kernel in both axes for convolution
 
     for y in range(input_image.shape[0]):
         for x in range(input_image.shape[1]):
