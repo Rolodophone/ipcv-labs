@@ -30,9 +30,10 @@ def convolution_colour(input_image, kernel):
     return output_image
 
 
-input_image = cv2.imread("mandrillRGB.jpg", cv2.IMREAD_COLOR)
-kernel = np.ones((3, 3)) / 9
+if __name__ == "__main__":
+    input_image = cv2.imread("mandrillRGB.jpg", cv2.IMREAD_COLOR)
+    kernel = np.ones((3, 3)) / 9
 
-cv2.imshow("Result", convolution_colour(input_image, kernel))
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+    cv2.imshow("Result", convolution_colour(input_image, kernel))
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
