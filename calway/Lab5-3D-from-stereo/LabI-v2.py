@@ -107,6 +107,16 @@ if __name__ == '__main__':
     Write your code here to define another sphere
     in world coordinate frame
     '''
+    name_list.append('sphere_4')
+    sph_mesh=o3d.geometry.TriangleMesh.create_sphere(radius=1.5)
+    mesh_list.append(sph_mesh)
+    H_list.append(np.array(
+        [[1, 0, 0, 4],
+         [0, 1, 0, 1.5],
+         [0, 0, 1, -4],
+         [0, 0, 0, 1]]
+    ))
+    RGB_list.append([0., 0.5, 0.5])
     #########################################
 
 
