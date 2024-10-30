@@ -151,8 +151,11 @@ if __name__ == '__main__':
     # H_init = np.eye(4)      
     # print(H_init)
 
+    # SERGI NOTE: the coordinates and rotation below don't represent the position/rotation of the
+    # camera in the world frame. It's actually the negation of that.
+
     # camera_0 (world to camera)
-    theta = np.pi * 45*5/180.
+    theta = np.pi * 45/180.
     # theta = 0.
     H0_wc = np.array(
                 [[1,            0,              0,  0],
@@ -207,6 +210,7 @@ if __name__ == '__main__':
     Write your code here to define the sphere
     in the camera coordinate frame
     '''
+
     ############################################################
 
 
