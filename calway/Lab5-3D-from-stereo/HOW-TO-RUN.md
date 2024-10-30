@@ -1,0 +1,1 @@
+I had to use version 0.16.0 of Open3d, Python 3.8.10 64-bit, and LabI-v2.py. My platform is Windows 11.
