@@ -124,8 +124,8 @@ if __name__ == '__main__':
     mesh_list.append(sph_mesh)
     H_list.append(np.array(
         [[1, 0, 0, 0],
-         [0, 1, 0, 14.1421/2],
-         [0, 0, 1, 14.1421/2],
+         [0, 1, 0, 1.5],
+         [0, 0, 1, 1.5],
          [0, 0, 0, 1]]
     ))
     RGB_list.append([0., 0.5, 0.5])
