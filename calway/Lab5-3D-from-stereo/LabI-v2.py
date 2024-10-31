@@ -117,6 +117,18 @@ if __name__ == '__main__':
          [0, 0, 0, 1]]
     ))
     RGB_list.append([0., 0.5, 0.5])
+
+    # Qn 4:
+    name_list.append('sphere_5')
+    sph_mesh=o3d.geometry.TriangleMesh.create_sphere(radius=1.5)
+    mesh_list.append(sph_mesh)
+    H_list.append(np.array(
+        [[1, 0, 0, 0],
+         [0, 1, 0, 14.1421/2],
+         [0, 0, 1, 14.1421/2],
+         [0, 0, 0, 1]]
+    ))
+    RGB_list.append([0., 0.5, 0.5])
     #########################################
 
 
@@ -155,7 +167,7 @@ if __name__ == '__main__':
     # camera in the world frame. It's actually the negation of that.
 
     # camera_0 (world to camera)
-    theta = np.pi * 45/180.
+    theta = np.pi * 45*5/180.
     # theta = 0.
     H0_wc = np.array(
                 [[1,            0,              0,  0],
